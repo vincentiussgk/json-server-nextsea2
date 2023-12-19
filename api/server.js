@@ -15,7 +15,6 @@ const router = jsonServer.router(db);
 
 const middlewares = jsonServer.defaults();
 
-server.use(middlewares);
 // Add this before server.use(router)
 server.use(
   jsonServer.rewriter({
@@ -23,7 +22,6 @@ server.use(
     "/blog/:resource/:id/show": "/:resource/:id",
   })
 );
-server.use(router);
 
 // Defining Custom APIs
 
@@ -31,12 +29,17 @@ server.get("/saved/:userId", async (req, res) => {
   try {
     const { userId } = req.params;
 
-    const response = await axios.get(`http://localhost:3000/bookmarks`, {
-      params: {
-        userId,
-        _expand: "events",
-      },
-    });
+    console.log(userId);
+
+    const response = await axios.get(
+      `http://localhost:3001/bookmarks?userId=${userId}&_expand=events`,
+      {
+        params: {
+          userId,
+          _expand: "events",
+        },
+      }
+    );
 
     res.json(response.data);
   } catch (error) {
@@ -44,7 +47,10 @@ server.get("/saved/:userId", async (req, res) => {
   }
 });
 
-server.listen(3000, () => {
+server.use(middlewares);
+server.use(router);
+
+server.listen(3001, () => {
   console.log("Server is running");
 });
 
