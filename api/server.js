@@ -38,6 +38,7 @@ server.get("/saved/:userId", async (req, res) => {
 
     res.json(response.data);
   } catch (error) {
+    console.error(error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
