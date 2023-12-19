@@ -1,7 +1,7 @@
 // See https://github.com/typicode/json-server#module
-import axios from "axios";
-import express from "express";
-import { router as _router, defaults, rewriter } from "json-server";
+const jsonServer = require("json-server");
+const axios = require("axios");
+const express = require("express");
 
 const server = express();
 
@@ -11,14 +11,14 @@ const path = require("path");
 const filePath = path.join("db.json");
 const data = fs.readFileSync(filePath, "utf-8");
 const db = JSON.parse(data);
-const router = _router(db);
+const router = jsonServer.router(db);
 
-const middlewares = defaults();
+const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
 // Add this before server.use(router)
 server.use(
-  rewriter({
+  jsonServer.rewriter({
     "/api/*": "/$1",
     "/blog/:resource/:id/show": "/:resource/:id",
   })
@@ -49,4 +49,4 @@ server.listen(3000, () => {
 });
 
 // Export the Server API
-export default server;
+module.exports = server;
