@@ -45,7 +45,7 @@ server.get("/saved/:userId", async (req, res) => {
 });
 
 server.listen(3000, () => {
-  console.log("JSON Server is running");
+  console.log("Server is running");
 });
 
 // Export the Server API
