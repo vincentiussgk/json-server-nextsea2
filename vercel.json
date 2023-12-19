@@ -10,11 +10,5 @@
       "source": "/(.*)",
       "destination": "api/server.js"
     }
-  ],
-  "builds": [
-    {
-      "src": "Dockerfile",
-      "use": "@vercel/docker"
-    }
   ]
 }
