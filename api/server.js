@@ -17,6 +17,11 @@ const middlewares = jsonServer.defaults();
 
 const port = 3001;
 
+const apiUrl =
+  process.env.NODE_ENV === "production"
+    ? "https://next-be-samuel.vercel.app"
+    : `http://localhost:${port}`;
+
 // Add this before server.use(router)
 server.use(
   jsonServer.rewriter({
@@ -35,7 +40,7 @@ server.get("/saved/:userId", async (req, res) => {
     console.log(userId);
 
     const response = await axios.get(
-      `http://localhost:${port}/bookmarks?userId=${userId ?? 1}&_expand=events`
+      `${apiUrl}/bookmarks?userId=${userId ?? 1}&_expand=events`
     );
 
     console.log(response);
