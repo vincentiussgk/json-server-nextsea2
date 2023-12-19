@@ -15,6 +15,8 @@ const router = jsonServer.router(db);
 
 const middlewares = jsonServer.defaults();
 
+const port = process.env.PORT || 3001;
+
 // Add this before server.use(router)
 server.use(
   jsonServer.rewriter({
@@ -29,7 +31,7 @@ server.get("/saved/:userId", async (req, res) => {
   try {
     const { userId } = req.params;
 
-    const response = await axios.get(`http://localhost:3001/bookmarks`, {
+    const response = await axios.get(`http://localhost:${port}/bookmarks`, {
       params: {
         userId,
         _expand: "events",
@@ -46,7 +48,7 @@ server.get("/saved/:userId", async (req, res) => {
 server.use(middlewares);
 server.use(router);
 
-server.listen(3001, () => {
+server.listen(port, () => {
   console.log("Server is running");
 });
 
