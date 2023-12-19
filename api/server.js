@@ -31,12 +31,13 @@ server.get("/saved/:userId", async (req, res) => {
   try {
     const { userId } = req.params;
 
-    const response = await axios.get(`http://localhost:${port}/bookmarks`, {
-      params: {
-        userId,
-        _expand: "events",
-      },
-    });
+    console.log(userId);
+
+    const response = await axios.get(
+      `http://localhost:${port}/bookmarks?userId=${userId ?? 1}&_expand=events`
+    );
+
+    console.log(response);
 
     res.json(response.data);
   } catch (error) {
