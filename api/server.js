@@ -29,6 +29,7 @@ server.use(
 
 server.get("/saved/:userId", async (req, res) => {
   try {
+    console.log("hi", req?.params);
     const { userId } = req.params;
 
     console.log(userId);
