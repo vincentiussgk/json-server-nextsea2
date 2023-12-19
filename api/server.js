@@ -29,8 +29,6 @@ server.get("/saved/:userId", async (req, res) => {
   try {
     const { userId } = req.params;
 
-    console.log(userId);
-
     const response = await axios.get(
       `http://localhost:3001/bookmarks?userId=${userId}&_expand=events`,
       {
