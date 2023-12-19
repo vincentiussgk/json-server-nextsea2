@@ -30,13 +30,7 @@ server.get("/saved/:userId", async (req, res) => {
     const { userId } = req.params;
 
     const response = await axios.get(
-      `http://localhost:3001/bookmarks?userId=${userId}&_expand=events`,
-      {
-        params: {
-          userId,
-          _expand: "events",
-        },
-      }
+      `http://localhost:3000/bookmarks?userId=${userId}&_expand=events`
     );
 
     res.json(response.data);
@@ -48,7 +42,7 @@ server.get("/saved/:userId", async (req, res) => {
 server.use(middlewares);
 server.use(router);
 
-server.listen(3001, () => {
+server.listen(3000, () => {
   console.log("Server is running");
 });
 
