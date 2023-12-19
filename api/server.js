@@ -1,7 +1,9 @@
 // See https://github.com/typicode/json-server#module
-import { create, router as _router, defaults, rewriter } from "json-server";
+import axios from "axios";
+import express from "express";
+import { router as _router, defaults, rewriter } from "json-server";
 
-const server = create();
+const server = express();
 
 // Uncomment to allow write operations
 const fs = require("fs");
@@ -22,6 +24,26 @@ server.use(
   })
 );
 server.use(router);
+
+// Defining Custom APIs
+
+server.get("/saved/:userId", async (req, res) => {
+  try {
+    const { userId } = req.params;
+
+    const response = await axios.get(`http://localhost:3000/bookmarks`, {
+      params: {
+        userId,
+        _expand: "events",
+      },
+    });
+
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
 server.listen(3000, () => {
   console.log("JSON Server is running");
 });
