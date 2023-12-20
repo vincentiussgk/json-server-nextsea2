@@ -5,17 +5,8 @@ const swaggerJsDoc = require("swagger-jsdoc");
 const swaggerUI = require("swagger-ui-express");
 const cors = require("cors");
 
-const server = express();
-
-// Uncomment to allow write operations
-const fs = require("fs");
-const path = require("path");
-const filePath = path.join("db.json");
-const data = fs.readFileSync(filePath, "utf-8");
-const db = JSON.parse(data);
-const router = jsonServer.router(db);
-
-const middlewares = jsonServer.defaults();
+const expressApp = express();
+const jsonServerApp = jsonServer.create();
 
 const port = 3001;
 
@@ -26,14 +17,13 @@ const apiUrl =
 
 const routeIndex = require("../routes/index");
 
-server.use(cors());
-server.use(bodyParser.json());
-server.use(bodyParser.urlencoded({ extended: true }));
+expressApp.use(cors());
+expressApp.use(bodyParser.json());
+expressApp.use(bodyParser.urlencoded({ extended: true }));
 
 // Defining Custom APIs
-
 Object.values(routeIndex).forEach((routeIndexItem) => {
-  server.use(routeIndexItem);
+  expressApp.use(routeIndexItem);
 });
 
 const options = {
@@ -49,22 +39,35 @@ const options = {
 };
 const specs = swaggerJsDoc(options);
 
-server.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
+expressApp.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 
-server.use(middlewares);
+const middlewares = jsonServer.defaults();
 
-// Add this before server.use(router)
-server.use(
+jsonServerApp.use(middlewares);
+
+// Add this before jsonServerApp.use(jsonServer.router(db))
+jsonServerApp.use(
   jsonServer.rewriter({
     "/api/*": "/$1",
     "/blog/:resource/:id/show": "/:resource/:id",
   })
 );
-server.use(router);
 
-server.listen(port, () => {
-  console.log("Server is running");
+const fs = require("fs");
+const path = require("path");
+const filePath = path.join("db.json");
+const data = fs.readFileSync(filePath, "utf-8");
+const db = JSON.parse(data);
+
+jsonServerApp.use(jsonServer.router(db));
+
+expressApp.listen(port + 1, () => {
+  console.log("Express Server is running");
 });
 
-// Export the Server API
-module.exports = server;
+jsonServerApp.listen(port, () => {
+  console.log("JSON Server is running on port", port + 1);
+});
+
+// Export the Express App
+module.exports = jsonServerApp;
