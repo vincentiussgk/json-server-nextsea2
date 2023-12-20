@@ -49,7 +49,7 @@ router.post("/register", async (req, res) => {
 
     const createUserResponse = await axios.post(`${apiUrl}/users`, {
       membership: null,
-      role: "user",
+      role: 2,
       balance: 0,
       image: "",
       ...req.body,
@@ -57,13 +57,10 @@ router.post("/register", async (req, res) => {
 
     res.json(createUserResponse.data);
   } catch (error) {
-    res
-      .status(error.status)
-      .json({
-        status: error.status,
-        statusText: error.message,
-        message: error.message,
-      });
+    res.status(error.status).json({
+      status: error.status,
+      message: error.message,
+    });
   }
 });
 

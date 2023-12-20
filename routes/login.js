@@ -55,13 +55,10 @@ router.post("/login", async (req, res) => {
 
     res.json(response.data[0]);
   } catch (error) {
-    res
-      .status(error.status)
-      .json({
-        status: error.status,
-        statusText: error.message,
-        message: error.message,
-      });
+    res.status(error.status).json({
+      status: error.status,
+      message: error.message,
+    });
   }
 });
 
