@@ -7,14 +7,15 @@ const cors = require("cors");
 
 const server = express();
 
+// Uncomment to allow write operations
 const fs = require("fs");
 const path = require("path");
 const filePath = path.join("db.json");
 const data = fs.readFileSync(filePath, "utf-8");
 const db = JSON.parse(data);
+const router = jsonServer.router(db);
 
 const middlewares = jsonServer.defaults();
-const router = jsonServer.router(db);
 
 const port = 3001;
 
@@ -28,6 +29,8 @@ const routeIndex = require("../routes/index");
 server.use(cors());
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
+
+// Defining Custom APIs
 
 Object.values(routeIndex).forEach((routeIndexItem) => {
   server.use(routeIndexItem);
@@ -48,6 +51,8 @@ const specs = swaggerJsDoc(options);
 
 server.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 
+server.use(middlewares);
+
 // Add this before server.use(router)
 server.use(
   jsonServer.rewriter({
@@ -55,8 +60,6 @@ server.use(
     "/blog/:resource/:id/show": "/:resource/:id",
   })
 );
-
-// Use the JSON server router
 server.use(router);
 
 server.listen(port, () => {
