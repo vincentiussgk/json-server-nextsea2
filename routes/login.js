@@ -55,8 +55,9 @@ router.post("/login", async (req, res) => {
 
     res.json(response.data[0]);
   } catch (error) {
-    console.error(error);
-    res.status(error.status).json({ error });
+    res
+      .status(error.status)
+      .json({ status: error.status, message: error.message });
   }
 });
 

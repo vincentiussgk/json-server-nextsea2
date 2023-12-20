@@ -57,8 +57,9 @@ router.post("/register", async (req, res) => {
 
     res.json(createUserResponse.data);
   } catch (error) {
-    console.error(error);
-    res.status(error.status).json({ error });
+    res
+      .status(error.status)
+      .json({ status: error.status, message: error.message });
   }
 });
 
