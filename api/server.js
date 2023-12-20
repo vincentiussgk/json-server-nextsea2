@@ -35,7 +35,9 @@ server.use(
 
 // Defining Custom APIs
 
-server.use(routeIndex.savedRouter);
+Object.values(routeIndex).forEach((routeIndexItem) => {
+  server.use(routeIndexItem);
+});
 
 const options = {
   definition: {
