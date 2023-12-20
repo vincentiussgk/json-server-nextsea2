@@ -9,6 +9,16 @@
       "membership": 2,
       "balance": 225653,
       "image": "http://res.cloudinary.com/dp9xqtibm/image/upload/v1702610392/ucz3lkdqotit9igzvpvi.png"
+    },
+    {
+      "id": 2,
+      "email": "user@mail.com",
+      "name": "User 1234",
+      "password": "1234",
+      "role": 2,
+      "membership": 2,
+      "balance": 225653,
+      "image": "http://res.cloudinary.com/dp9xqtibm/image/upload/v1702610392/ucz3lkdqotit9igzvpvi.png"
     }
   ],
   "events": [
