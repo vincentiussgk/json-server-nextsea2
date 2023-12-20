@@ -53,6 +53,8 @@ router.post("/login", async (req, res) => {
       throw error;
     }
 
+    console.log(response.data[0]);
+
     res.json(response.data[0]);
   } catch (error) {
     res.status(error.status).json({

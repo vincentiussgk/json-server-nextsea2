@@ -1,4 +1,3 @@
-// See https://github.com/typicode/json-server#module
 const jsonServer = require("json-server");
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -8,15 +7,14 @@ const cors = require("cors");
 
 const server = express();
 
-// Uncomment to allow write operations
 const fs = require("fs");
 const path = require("path");
 const filePath = path.join("db.json");
 const data = fs.readFileSync(filePath, "utf-8");
 const db = JSON.parse(data);
-const router = jsonServer.router(db);
 
 const middlewares = jsonServer.defaults();
+const router = jsonServer.router(db);
 
 const port = 3001;
 
@@ -27,18 +25,9 @@ const apiUrl =
 
 const routeIndex = require("../routes/index");
 
-// Add this before server.use(router)
 server.use(cors());
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
-server.use(
-  jsonServer.rewriter({
-    "/api/*": "/$1",
-    "/blog/:resource/:id/show": "/:resource/:id",
-  })
-);
-
-// Defining Custom APIs
 
 Object.values(routeIndex).forEach((routeIndexItem) => {
   server.use(routeIndexItem);
@@ -59,7 +48,15 @@ const specs = swaggerJsDoc(options);
 
 server.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 
-server.use(middlewares);
+// Add this before server.use(router)
+server.use(
+  jsonServer.rewriter({
+    "/api/*": "/$1",
+    "/blog/:resource/:id/show": "/:resource/:id",
+  })
+);
+
+// Use the JSON server router
 server.use(router);
 
 server.listen(port, () => {
