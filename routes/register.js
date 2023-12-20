@@ -11,10 +11,10 @@ const apiUrl =
 
 /**
  * @swagger
- * /login:
+ * /register:
  *   post:
- *     summary: Attempts to log in the application using provided details.
- *     description: Logs in with given credentials.
+ *     summary: Attempts to create a new account if the email doesn't exist.
+ *     description: Creates a new account.
  *     requestBody:
  *       required: true
  *       content:
@@ -35,23 +35,19 @@ const apiUrl =
  *         description: Internal server error
  */
 
-router.post("/login", async (req, res) => {
+router.post("/register", async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const { email, name, role, password } = req.body;
 
     const response = await axios.get(`${apiUrl}/users?email=${email}`);
 
-    if (!response?.data || response?.data.length === 0) {
-      const error = new Error("User not found!");
-      error.status = 404;
-      throw error;
-    }
-
-    if (response?.data?.[0].password !== password) {
-      const error = new Error("Wrong password provided!");
+    if (response.data.length !== 0) {
+      const error = new Error("Email already exists");
       error.status = 401;
       throw error;
     }
+
+    // ngepost
 
     res.json(response.data[0]);
   } catch (error) {
