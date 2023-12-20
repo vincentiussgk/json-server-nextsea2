@@ -21,7 +21,7 @@ const port = 3001;
 
 const apiUrl =
   process.env.NODE_ENV === "production"
-    ? "https://next-be-samuel.vercel.app:3001"
+    ? "https://next-be-samuel.vercel.app"
     : `http://localhost:${port}`;
 
 const routeIndex = require("../routes/index");
