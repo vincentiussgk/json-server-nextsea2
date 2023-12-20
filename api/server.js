@@ -1,7 +1,8 @@
 // See https://github.com/typicode/json-server#module
 const jsonServer = require("json-server");
-const axios = require("axios");
 const express = require("express");
+const swaggerJsDoc = require("swagger-jsdoc");
+const swaggerUI = require("swagger-ui-express");
 
 const server = express();
 
@@ -22,6 +23,8 @@ const apiUrl =
     ? "https://next-be-samuel.vercel.app"
     : `http://localhost:${port}`;
 
+const routeIndex = require("../routes/index");
+
 // Add this before server.use(router)
 server.use(
   jsonServer.rewriter({
@@ -32,25 +35,22 @@ server.use(
 
 // Defining Custom APIs
 
-server.get("/saved/:userId", async (req, res) => {
-  try {
-    console.log("hi", req?.params);
-    const { userId } = req.params;
+server.use(routeIndex.savedRouter);
 
-    console.log(userId);
+const options = {
+  definition: {
+    openapi: "3.0.0",
+    servers: [
+      {
+        url: apiUrl,
+      },
+    ],
+  },
+  apis: ["./routes/*.js"],
+};
+const specs = swaggerJsDoc(options);
 
-    const response = await axios.get(
-      `${apiUrl}/bookmarks?userId=${userId ?? 1}&_expand=events`
-    );
-
-    console.log(response);
-
-    res.json(response.data);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error });
-  }
-});
+server.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 
 server.use(middlewares);
 server.use(router);
