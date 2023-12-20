@@ -1,6 +1,7 @@
 // See https://github.com/typicode/json-server#module
 const jsonServer = require("json-server");
 const express = require("express");
+const bodyParser = require("body-parser");
 const swaggerJsDoc = require("swagger-jsdoc");
 const swaggerUI = require("swagger-ui-express");
 
@@ -26,6 +27,8 @@ const apiUrl =
 const routeIndex = require("../routes/index");
 
 // Add this before server.use(router)
+server.use(bodyParser.json());
+server.use(bodyParser.urlencoded({ extended: true }));
 server.use(
   jsonServer.rewriter({
     "/api/*": "/$1",
