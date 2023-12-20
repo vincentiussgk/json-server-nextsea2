@@ -4,6 +4,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const swaggerJsDoc = require("swagger-jsdoc");
 const swaggerUI = require("swagger-ui-express");
+const cors = require("cors");
 
 const server = express();
 
@@ -27,6 +28,7 @@ const apiUrl =
 const routeIndex = require("../routes/index");
 
 // Add this before server.use(router)
+server.use(cors());
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use(
