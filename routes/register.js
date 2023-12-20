@@ -37,7 +37,7 @@ const apiUrl =
 
 router.post("/register", async (req, res) => {
   try {
-    const { email, name, role, password } = req.body;
+    const { email } = req.body;
 
     const response = await axios.get(`${apiUrl}/users?email=${email}`);
 
@@ -47,9 +47,15 @@ router.post("/register", async (req, res) => {
       throw error;
     }
 
-    // ngepost
+    const createUserResponse = await axios.post(`${apiUrl}/users`, {
+      membership: null,
+      role: "user",
+      balance: 0,
+      image: "",
+      ...req.body,
+    });
 
-    res.json(response.data[0]);
+    res.json(createUserResponse.data);
   } catch (error) {
     console.error(error);
     res.status(error.status).json({ error });
