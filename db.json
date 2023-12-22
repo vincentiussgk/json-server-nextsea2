@@ -6,188 +6,229 @@
       "name": "Test",
       "password": "1234",
       "role": 1,
-      "membership": 2,
-      "balance": 225653,
+      "membership": 1,
+      "balance": 9252.999999999993,
       "image": "http://res.cloudinary.com/dp9xqtibm/image/upload/v1702610392/ucz3lkdqotit9igzvpvi.png"
     },
     {
       "id": 2,
       "email": "user@mail.com",
-      "name": "User 1234",
+      "name": "User 12345123",
       "password": "1234",
       "role": 2,
       "membership": 2,
-      "balance": 225653,
+      "balance": 190618,
       "image": "http://res.cloudinary.com/dp9xqtibm/image/upload/v1702610392/ucz3lkdqotit9igzvpvi.png"
+    },
+    {
+      "email": "new@mail.com",
+      "name": "New user",
+      "password": "1234",
+      "pin": "123",
+      "balance": 25093.999999999996,
+      "image": "",
+      "role": 2,
+      "membership": 3,
+      "id": 3
+    },
+    {
+      "email": "new2@mail.com",
+      "name": "Newer User",
+      "password": "1234",
+      "pin": "123",
+      "balance": 46594,
+      "image": "",
+      "role": 1,
+      "membership": 0,
+      "id": 4
     }
   ],
   "events": [
     {
-      "id": 1,
-      "name": "Bunka no Hi",
-      "startTime": "January 20, 2020",
-      "location": "Palmerah, Jakarta",
-      "duration": 3,
-      "category": 1,
-      "price": 20000,
-      "image": "http://res.cloudinary.com/dp9xqtibm/image/upload/v1702985997/dlkb22vwf63puzbncfdz.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "name": "Holiday Matsuri ",
+      "date": "2023-10-22T03:00:00.000Z",
+      "location": "Jakarta",
+      "duration": 48,
+      "category": "4",
+      "price": 5000,
+      "image": "http://res.cloudinary.com/dp9xqtibm/image/upload/v1703208019/yumamolbfygky46ca0c2.png",
+      "description": "Anime Convention with Video Gaming programming\n\nHoliday Matsuri is the festively themed Anime, Gaming, and Cosplay convention with holiday cheer in Orlando, Florida!\n\nEvery December thousands of attendees come together during the holidays to celebrate their favorite fandoms, all with a holiday twist.\n\nCheck out our seasonal spin on convention favorites including cosplay contests, interactive workshops & panels, holiday shopping, gaming tournaments, dances and much more!",
+      "capacity": 200,
+      "current": 2,
+      "id": 1
+    },
+    {
+      "name": "Otakukon 2023",
+      "date": "2022-11-20T10:20",
+      "location": "Sudirman, Jakarta",
+      "duration": 5,
+      "category": "1",
+      "price": 5000,
+      "image": "http://res.cloudinary.com/dp9xqtibm/image/upload/v1703208136/wbw9iajrioehzviwlksu.jpg",
+      "description": "Anime Convention\n\nOTAKUKON is the first Anime Convention in Zimbabwe that will be launched in December of 2023. Otaku Konnect is a Zimbabwean organization whose mission is to create an environment for fans of Japanese animation (anime), Japanese graphic novels (manga), related gaming and Japanese pop-culture to share and learn from one another through community based events and conventions. Otaku Konnect's main annual event, Otakukon, is the annual gathering and realization of this commitment. O",
       "capacity": 20,
-      "current": 16,
-      "date": "2002-01-22T10:10"
-    },
-    {
-      "id": 2,
-      "name": "Comifuro",
-      "startTime": "January 23, 2020",
-      "location": "Pacific Place, Jakarta",
-      "duration": 2,
-      "category": 2,
-      "price": 25000,
-      "image": "/icons/SiAnimeLogo.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "capacity": 50,
-      "current": 39,
-      "date": "2000-01-01T22:20"
-    },
-    {
-      "name": "12e12",
-      "category": "2",
-      "location": "1212",
-      "startTime": "21e12e",
-      "duration": 21,
-      "price": "212",
-      "capacity": "232",
       "current": 0,
-      "desc": "32",
-      "id": 3,
-      "date": "2000-01-01T22:20"
+      "id": 2
+    },
+    {
+      "name": "Night at the Ramada 2023",
+      "date": "2024-09-21T10:20",
+      "location": "Medan",
+      "duration": 24,
+      "category": "3",
+      "price": "3500",
+      "image": "http://res.cloudinary.com/dp9xqtibm/image/upload/v1703208215/jt52vlndebzghznvqtub.png",
+      "description": "Night at The Ramada is the first Christmas anime convention in California! Join us for an exciting night filled with: Anime themed holiday festivities, Maid cafe, Voice Actors, Itasha car showcase, 30+ vendors/artists and more!",
+      "capacity": 3,
+      "current": 2,
+      "id": 3
+    },
+    {
+      "name": "Doki's Winter Fest 2023",
+      "date": "2024-03-22T10:20",
+      "location": "Kebayoran",
+      "duration": 60,
+      "category": "2",
+      "price": 20000,
+      "image": "http://res.cloudinary.com/dp9xqtibm/image/upload/v1703210490/ew3l68vricqtd0z6wqca.png",
+      "description": "Dokidokon is excited and honored to host a brand-new winter convention! Doki's Winter Fest!\n\nEnjoy a weekend of cosplay, concerts, vendors, panels, workshops, special guests, and more!\n\nCome celebrate the end of the year in Kalamazoo and stay until Monday to ring in the New Year with your friends!",
+      "capacity": "5",
+      "current": 0,
+      "id": 4
+    },
+    {
+      "name": "Ichibancon 2024",
+      "date": "2002-01-31T10:30",
+      "location": "Sunter",
+      "duration": 1,
+      "category": "2",
+      "price": 9000,
+      "image": "http://res.cloudinary.com/dp9xqtibm/image/upload/v1703210596/uuvgifeumj6suus985x4.png",
+      "description": "Ichibancon is a four-day event that features a variety of entertainment in a diverse, multi-function, crowd-friendly environment. One ticket price gives you access to all Concerts, Live Acts, and Performers to industry and media guests, DJs, artists, and vendors.",
+      "capacity": "5",
+      "current": 0,
+      "id": 5
     }
   ],
   "merch": [
     {
-      "id": 1,
-      "price": 50,
-      "image": "http://res.cloudinary.com/dp9xqtibm/image/upload/v1702983426/f8n16657ayyxuecggbtx.png",
-      "name": "Light Stick",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "name": "ANIME GIFT BOX- KOTAK KEJUTAN HADIAH ANIME - GATCHA ANIME - KADO ANIME",
+      "price": "5000",
+      "image": "http://res.cloudinary.com/dp9xqtibm/image/upload/v1703210811/wp2otqlpdfygpbbzpdn1.jpg",
       "eventId": 1,
-      "stock": 3
+      "stock": "5",
+      "desc": "HADIAH KEJUTAN ANIME GATCHA RANDOM\n\nFIGURE ACTION\nKEYCHAIN\nPHOTOCARD\nPOLAROID\nMUG\nCUP\nSTANDEE",
+      "id": 1
     },
     {
-      "id": 2,
-      "price": 500,
-      "image": "/icons/SiAnimeLogo.png",
-      "name": "Dark Stick",
-      "desc": "Lalalalalala iyaiya",
+      "name": "Gantungan Kunci Akrilik Anime Demon Slayer",
+      "image": "http://res.cloudinary.com/dp9xqtibm/image/upload/v1703210887/npo789esna1x4kno9ufx.jpg",
+      "price": "20000",
       "eventId": 1,
-      "stock": "222"
+      "stock": 3,
+      "desc": "Gantungan kunci karakter Anime Demon Slayer (Kimetsu No Yaiba)\nCocok untuk hadiah, koleksi, souvenir, aksesoris berbagai kegunaan, gantungan tas, kunci motor, gantungan mobil dan masih banyak lagi. ",
+      "id": 2
     },
     {
-      "id": 3,
-      "price": "2001",
-      "image": "/icons/SiAnimeLogo.png",
-      "name": "Green Stick1",
-      "desc": "Hehehehe iyaiya",
+      "name": "Gacha anime merch&acfig",
+      "image": "http://res.cloudinary.com/dp9xqtibm/image/upload/v1703210943/j2pwyotdb74hbfa3zl2b.jpg",
+      "price": "2000",
       "eventId": 2,
-      "stock": "562"
+      "stock": "10",
+      "desc": "ini adalah gacha anime yg barangnya bisa berupa:\n-poster\n-manga\n-action figure\n-polaroid",
+      "id": 3
+    },
+    {
+      "name": "HAIKYUU!! MUG ANIME / GELAS / MUG KERAMIK",
+      "price": "15000",
+      "image": "http://res.cloudinary.com/dp9xqtibm/image/upload/v1703210996/dzgbc4j7gctuwxy3vcak.jpg",
+      "eventId": 2,
+      "stock": "15",
+      "desc": "Mug dengan desain dari anime kesayangan kalian nih! yukk langsung marathon animenya sambil minum dengan gelas desain anime kesukaan kalian ini!",
+      "id": 4
     }
   ],
   "purchases": [
     {
-      "eventId": 1,
-      "userId": 1,
-      "purchaseDate": "1702355120210",
-      "merch": [
-        {
-          "id": 1,
-          "price": 50,
-          "image": "/icons/SiAnimeLogo.png",
-          "name": "Light Stick",
-          "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "eventId": 1,
-          "qty": 4
-        },
-        {
-          "id": 2,
-          "price": 500,
-          "image": "/icons/SiAnimeLogo.png",
-          "name": "Dark Stick",
-          "desc": "Lalalalalala iyaiya",
-          "eventId": 1,
-          "qty": 5
-        }
-      ],
-      "paymentStatus": false,
-      "paymentTotal": 22700,
-      "id": 1
-    },
-    {
-      "eventId": 1,
-      "userId": 1,
-      "purchaseDate": "1702355121936",
-      "merch": [
-        {
-          "id": 1,
-          "price": 50,
-          "image": "/icons/SiAnimeLogo.png",
-          "name": "Light Stick",
-          "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          "eventId": 1,
-          "qty": 4
-        },
-        {
-          "id": 2,
-          "price": 500,
-          "image": "/icons/SiAnimeLogo.png",
-          "name": "Dark Stick",
-          "desc": "Lalalalalala iyaiya",
-          "eventId": 1,
-          "qty": 5
-        }
-      ],
+      "userId": 2,
+      "eventId": 3,
       "paymentStatus": true,
-      "paymentTotal": 22700,
-      "id": 2
+      "id": 1,
+      "purchaseDate": "2023-10-22T01:27:45.296Z",
+      "merch": [],
+      "paymentTotal": 3185.0000000000005
     },
     {
+      "userId": 2,
       "eventId": 1,
-      "userId": 1,
-      "purchaseDate": "1702364740422",
+      "paymentStatus": true,
+      "id": 2,
+      "purchaseDate": "2023-11-22T02:12:57.023Z",
       "merch": [
         {
-          "id": 1,
-          "price": 50,
-          "image": "/icons/SiAnimeLogo.png",
-          "name": "Light Stick",
-          "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "name": "ANIME GIFT BOX- KOTAK KEJUTAN HADIAH ANIME - GATCHA ANIME - KADO ANIME",
+          "price": "5000",
+          "image": "http://res.cloudinary.com/dp9xqtibm/image/upload/v1703210811/wp2otqlpdfygpbbzpdn1.jpg",
           "eventId": 1,
-          "qty": 1
+          "stock": "2",
+          "desc": "HADIAH KEJUTAN ANIME GATCHA RANDOM\n\nFIGURE ACTION\nKEYCHAIN\nPHOTOCARD\nPOLAROID\nMUG\nCUP\nSTANDEE",
+          "id": 1,
+          "qty": 2
         },
         {
-          "id": 2,
-          "price": 500,
-          "image": "/icons/SiAnimeLogo.png",
-          "name": "Dark Stick",
-          "desc": "Lalalalalala iyaiya",
+          "name": "Gantungan Kunci Akrilik Anime Demon Slayer",
+          "image": "http://res.cloudinary.com/dp9xqtibm/image/upload/v1703210887/npo789esna1x4kno9ufx.jpg",
+          "price": "20000",
           "eventId": 1,
-          "qty": 2
+          "stock": "5",
+          "desc": "Gantungan kunci karakter Anime Demon Slayer (Kimetsu No Yaiba)\nCocok untuk hadiah, koleksi, souvenir, aksesoris berbagai kegunaan, gantungan tas, kunci motor, gantungan mobil dan masih banyak lagi. ",
+          "id": 2,
+          "qty": 1
         }
       ],
+      "paymentTotal": 31850.000000000004
+    },
+    {
+      "userId": 3,
+      "eventId": 1,
+      "paymentStatus": true,
+      "id": 3,
+      "purchaseDate": "2023-12-22T02:15:08.041Z",
+      "merch": [
+        {
+          "name": "Gantungan Kunci Akrilik Anime Demon Slayer",
+          "image": "http://res.cloudinary.com/dp9xqtibm/image/upload/v1703210887/npo789esna1x4kno9ufx.jpg",
+          "price": "20000",
+          "eventId": 1,
+          "stock": 4,
+          "desc": "Gantungan kunci karakter Anime Demon Slayer (Kimetsu No Yaiba)\nCocok untuk hadiah, koleksi, souvenir, aksesoris berbagai kegunaan, gantungan tas, kunci motor, gantungan mobil dan masih banyak lagi. ",
+          "id": 2,
+          "qty": 1
+        }
+      ],
+      "paymentTotal": 21500.000000000004
+    },
+    {
+      "userId": 3,
+      "eventId": 3,
       "paymentStatus": false,
-      "paymentTotal": 21050,
-      "id": 3
+      "id": 4
     }
   ],
   "bookmarks": [
     {
-      "usersId": 1,
+      "usersId": 2,
       "eventsId": 1,
+      "id": 1
+    },
+    {
+      "usersId": 2,
+      "eventsId": 5,
       "id": 2
     },
     {
-      "usersId": 1,
-      "eventsId": 2,
+      "usersId": 2,
+      "eventsId": 3,
       "id": 3
     }
   ]
